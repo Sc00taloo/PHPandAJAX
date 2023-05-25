@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #00ffe7;
+    color: #00c0ff;
+}
+header {
+    background-color:#212121;
+    box-shadow: 0 -1px 2px #111111;
+    display:block;
+    height:70px;
+
+}
+header h2{
+    font-size:22px;
+    font-weight:normal;
+    padding:22px 20px;
+    min-width:200px;
+}
+
