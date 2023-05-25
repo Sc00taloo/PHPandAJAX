@@ -9,6 +9,9 @@ session_start();
             $_SESSION['count'] ++;
             header("refresh:1; url=index.php");
         }
+        if($_SESSION['count'] >= 3){
+            header("refresh:1; url=indexwait.php");
+        }
     }
 
 ?>

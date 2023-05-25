@@ -1,7 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION['count'])){
-    $_SESSION['count'] = 0;
+if($_SESSION['count'] >= 3){
+    header("Refresh:10, url=index.php");
+    unset($_SESSION['count']);
+    echo '<p style="color: red">Ваши попытки исчерпаны, подождите минуту (10 секунд)</p>';
 }
 ?>
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ if(!isset($_SESSION['count'])){
 <form class="forma" action="authorize.php" method="post">
     Логин: <input type="text" name="user_name"><br>
     Пароль: <input type="password" name="user_pass"><br>
-    <input type="submit" name="Submit">
+    <input type="submit" name="Submit" disabled>
 </form>
 
 </body>
